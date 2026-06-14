@@ -141,7 +141,7 @@ void ADC_ADCX_DMA1_IRQHandler(void)
 {
     if ((DMA1 -> ISR & (1 << 1))) {
         // 处理ADC DMA传输完成事件
-        xSemaphoreGive( xSemaphore ); // 释放信号量，通知数据处理任务
+        xSemaphoreGiveFromISR( xSemaphore, NULL ); // 释放信号量，通知数据处理任务
         DMA1->IFCR |= DMA_ISR_TCIF1;
     }
 }
