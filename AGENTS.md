@@ -1,3 +1,8 @@
+---
+description: 
+alwaysApply: true
+---
+
 # AGENTS.md — FreeRTOS mutask dataacq
 
 ## Platform
