@@ -1,0 +1,16 @@
+#include "unity.h"
+#include "test_bsp.h"
+#include "test_core.h"
+
+void setUp(void) {
+}
+
+void tearDown(void) {
+}
+
+int main(void) {
+    UNITY_BEGIN();
+    RUN_TEST(test_bsp);
+    RUN_TEST(test_core);
+    return UNITY_END();
+}
